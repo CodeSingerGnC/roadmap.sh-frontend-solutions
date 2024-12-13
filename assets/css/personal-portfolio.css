@@ -1,0 +1,117 @@
+@import url(https://fonts.bunny.net/css?family=abril-fatface:400|alegreya:400,400i,500,500i,600,600i,700,700i,800,800i,900,900i);
+
+html {
+    font-family: 'Alegreya', serif;
+    background-color: rgb(1,22,39);
+    color: #9baab6;
+}
+
+body {
+    margin: 0;
+    padding: 20px;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;    
+    flex-flow: row wrap;
+}
+
+a {
+    color: rgb(218,89,91);
+}
+
+.yourName {
+    font-family: 'Abril Fatface', Italic;
+    font-style: italic;
+    font-size: 24px;
+}
+
+.navlist {
+    display: flex;
+    justify-content: space-between;
+    flex-flow: row wrap;
+}
+
+.navitem {
+    list-style-type: none;
+    margin: 17px;
+}
+
+.navlink {
+    padding: 0.25rem 0.5rem;
+}
+
+.intro {
+    text-align: center;
+    border: 2px solid;
+}
+
+.wrapper {
+    display: flex;
+    justify-content: space-between;
+    flex-flow: row wrap;
+    border: 1px solid;
+}
+
+.projects {
+    width: 200px;
+    flex-grow: 2;
+    padding: 0px;
+    border: 1px solid;
+}
+
+.projects h2 {
+    padding: 5px;
+}
+
+.projectList {
+    list-style-type: none;
+    padding: 0;
+}
+
+.projectItem {
+    border-top: 1px solid;
+    padding: 5px;
+}
+
+.workExperience {
+    width: 400px;
+    flex-grow: 2;
+    border: 1px solid;
+}
+
+.workExperience h2 {
+    padding: 5px;
+}
+
+.experienceItem {
+    border-top: 1px solid;
+    padding: 5px;
+}
+
+.education {
+    width: 300px;
+    flex-grow: 2;
+    padding: 5px;
+    border: 1px solid;
+}
+
+.reviews {
+    border-top: 2px solid;
+}
+
+.reviewsBlock {
+    display: flex;
+    justify-content: space-between;
+    flex-flow: row wrap;
+}
+
+.review {
+    width: 290px;
+    border: 1px solid;
+    border-radius: 15px;
+    margin: 5px 1px;
+    padding: 0 0 0 5px;
+    flex-grow: 2;
+}
