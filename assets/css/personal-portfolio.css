@@ -50,6 +50,7 @@ a {
     display: flex;
     justify-content: space-between;
     border: 1px solid;
+    box-sizing: border-box; /* 确保内边距和边框包含在宽度内 */
 }
 
 .projects {
@@ -57,6 +58,7 @@ a {
     padding: 0px;
     border: 1px solid;
     flex-grow: 2;
+    box-sizing: border-box; /* 确保内边距和边框包含在宽度内 */
 }
 
 .projects h2 {
@@ -71,6 +73,7 @@ a {
 .projectItem {
     border-top: 1px solid;
     padding-left: 5px;
+    box-sizing: border-box; /* 确保内边距和边框包含在宽度内 */
 }
 
 .workExperience {
@@ -163,5 +166,11 @@ a {
     }
     .navitem {
         text-align: center;
+    }
+}
+
+@media (max-width: 300px) {
+    .projects, .workExperience, .education {
+        min-width: 0;
     }
 }
