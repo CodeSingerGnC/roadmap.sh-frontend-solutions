@@ -30,7 +30,6 @@ a {
 .navlist {
     display: flex;
     justify-content: space-between;
-    flex-flow: row wrap;
 }
 
 .navitem {
@@ -50,19 +49,18 @@ a {
 .wrapper {
     display: flex;
     justify-content: space-between;
-    flex-flow: row wrap;
     border: 1px solid;
 }
 
 .projects {
-    width: 200px;
-    flex-grow: 2;
+    min-width: 200px;
     padding: 0px;
     border: 1px solid;
+    flex-grow: 2;
 }
 
 .projects h2 {
-    padding: 5px;
+    padding-left: 5px;
 }
 
 .projectList {
@@ -72,29 +70,33 @@ a {
 
 .projectItem {
     border-top: 1px solid;
-    padding: 5px;
+    padding-left: 5px;
 }
 
 .workExperience {
-    width: 400px;
-    flex-grow: 2;
+    min-width: 300px;
     border: 1px solid;
+    flex-grow: 2;
 }
 
 .workExperience h2 {
-    padding: 5px;
+    padding-left: 5px;
 }
 
 .experienceItem {
     border-top: 1px solid;
-    padding: 5px;
+    padding-left: 5px;
 }
 
 .education {
-    width: 300px;
-    flex-grow: 2;
-    padding: 5px;
+    min-width: 200px;
+    padding-left: 5px;
     border: 1px solid;
+    flex-grow: 2;
+}
+
+.education h2, p {
+    padding-left: 5px;
 }
 
 .reviews {
@@ -104,7 +106,6 @@ a {
 .reviewsBlock {
     display: flex;
     justify-content: space-between;
-    flex-flow: row wrap;
 }
 
 .review {
@@ -114,4 +115,53 @@ a {
     margin: 5px 1px;
     padding: 0 0 0 5px;
     flex-grow: 2;
+}
+
+@media (max-width: 827px) {
+    .wrapper {
+        margin: 0;
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+
+    }
+    .projects, .workExperience, .education {
+        margin: 0;
+        padding: 0;
+        width: 100%;
+        box-sizing: border-box; /* 确保内边距和边框包含在宽度内 */
+    }
+    .reviewsBlock {
+        margin: 0;
+        padding: 0;
+        display: flex;
+        flex-direction: column;
+    }
+    .review {
+        width: 100%;
+    }
+}
+
+@media (max-width: 600px) {
+    header {
+        display: flex;
+        flex-direction: column;
+    }
+    .yourName {
+        font-family: 'Abril Fatface', Italic;
+        font-style: italic;
+        font-size: 24px;
+        text-align: center;
+    }
+}
+
+@media (max-width: 476px) {
+    .navlist {
+        padding: 0;
+        display: flex;
+        flex-direction: column;
+    }
+    .navitem {
+        text-align: center;
+    }
 }
