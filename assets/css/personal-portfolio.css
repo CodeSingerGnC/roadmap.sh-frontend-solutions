@@ -2,19 +2,62 @@
 
 html {
     font-family: 'Alegreya', serif;
-    background-color: rgb(1,22,39);
-    color: #9baab6;
 }
 
 body {
     margin: 0;
     padding: 20px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+body.light-mode {
+    background-color: white;
+    color: black;
+}
+
+body.dark-mode {
+    background-color: rgb(1,22,39);
+    color: #9baab6;
+}
+
+#toggle-mode {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 30px;
+    height: 30px;
+    background-color: white;
+    border-radius: 50%;
+    border: none;
+    cursor: pointer;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 0.3s;
+}
+
+.dark-mode #toggle-mode {
+    background-color: rgb(1,22,39);
+    box-shadow: 0px 4px 6px rgba(255, 255, 255, 0.2);
+}
+
+#toggle-mode::before {
+    content: "☀️";
+    font-size: 20px;
+    transition: transform 0.3s, opacity 0.3s;
+}
+
+.dark-mode #toggle-mode::before {
+    content: "🌙";
+    transform: rotate(-20deg);
 }
 
 header {
     display: flex;
-    justify-content: space-between;    
+    justify-content: space-between;
     flex-flow: row wrap;
+    align-items: center;
 }
 
 a {
@@ -43,20 +86,20 @@ a {
 
 .intro {
     text-align: center;
-    border: 2px solid;
+    border: 1px solid;
 }
 
 .wrapper {
     display: flex;
     justify-content: space-between;
-    border: 1px solid;
+    border: 0.5px solid;
     box-sizing: border-box; /* 确保内边距和边框包含在宽度内 */
 }
 
 .projects {
     min-width: 200px;
     padding: 0px;
-    border: 1px solid;
+    border: 0.5px solid;
     flex-grow: 2;
     box-sizing: border-box; /* 确保内边距和边框包含在宽度内 */
 }
@@ -71,14 +114,14 @@ a {
 }
 
 .projectItem {
-    border-top: 1px solid;
+    border-top: 0.5px solid;
     padding-left: 5px;
     box-sizing: border-box; /* 确保内边距和边框包含在宽度内 */
 }
 
 .workExperience {
     min-width: 300px;
-    border: 1px solid;
+    border: 0.5px solid;
     flex-grow: 2;
 }
 
@@ -87,14 +130,14 @@ a {
 }
 
 .experienceItem {
-    border-top: 1px solid;
+    border-top: 0.5px solid;
     padding-left: 5px;
 }
 
 .education {
     min-width: 200px;
     padding-left: 5px;
-    border: 1px solid;
+    border: 0.5px solid;
     flex-grow: 2;
 }
 
@@ -103,7 +146,7 @@ a {
 }
 
 .reviews {
-    border-top: 2px solid;
+    border-top: 1px solid;
 }
 
 .reviewsBlock {
