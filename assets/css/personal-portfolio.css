@@ -40,12 +40,14 @@ body.dark-mode {
 .dark-mode #toggle-mode {
     background-color: rgb(1,22,39);
     box-shadow: 0px 4px 6px rgba(255, 255, 255, 0.2);
+    transition: background-color 0.3s;
 }
 
 #toggle-mode::before {
     content: "☀️";
     font-size: 20px;
     transition: transform 0.3s, opacity 0.3s;
+    transition: background-color 0.3s;
 }
 
 .dark-mode #toggle-mode::before {
