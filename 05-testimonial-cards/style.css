@@ -236,3 +236,37 @@ button {
     padding-left: 30px;
 }
 
+/* media
+------------------------------------------------------------
+*/
+
+@media (max-width: 620px) {
+    body {
+        font: normal 16px/1.5 'Alegreya Sans', sans-serif;
+    
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: auto;
+        grid-template-areas: 
+            "part1"
+            "part2"
+            "part3"
+            "part4";
+        gap: 10px;
+    
+        width: auto;
+    }
+    .testimonial-card3 {
+        display: flex;
+        flex-direction: column;
+    }
+    .testimonial-card3 img {
+        display: none;
+    }
+}
+
+@media (max-width: 300px) {
+    .sliders .img-box .un {
+        display: none;
+    }
+}
