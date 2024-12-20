@@ -1,0 +1,153 @@
+@import url(https://fonts.bunny.net/css?family=alegreya-sans:100,300,400,500,700,800,900);
+
+:root {
+    --black: #000;
+    --white: #fff;
+}
+
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    position: relative;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    
+    font: normal 16px/1.5 'Alegreya Sans', sans-serif;
+    max-width: 400px;
+
+    margin: 0 auto;
+    padding-top: 10px;
+}
+
+/* input-container SECTION
+---------------------------
+*/
+
+.input-container {
+    position: relative;
+
+    width: 100%;
+
+    border-radius: 15px;
+
+    display: flex;
+    flex-direction: row;
+}
+
+.input-container #custom-date {
+    width: 100%;
+    height: 35px;
+}
+
+.input-container .button-with-bg {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 5px;
+
+    width: 30px;
+    height: 30px;
+
+    border: none;
+
+    background-image: url('istockphoto.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+
+    cursor: pointer;
+}
+
+/* date-picker SECTION
+---------------------------
+*/
+
+.date-picker {
+    position: absolute;
+    top: 80.5px;
+    transform: translateY(-50%);
+
+    display: flex;
+    flex-direction: row;
+
+    max-height: 50px;
+}
+
+.date-picker .date {
+    font-size: 20px;
+    font-weight: bold;
+
+    margin: 0 50px;
+}
+
+.date-picker button {
+    border: none;
+    background: none;
+    font-size: 18px;
+    cursor: pointer;
+}
+
+/* calendar SECTION
+---------------------------
+*/
+
+.calendar {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+
+    width: 100%;
+    border: 1px solid #ccc;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+}
+
+.calendar div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    margin: 5px;
+}
+
+.calendar .header {
+    font-weight: bold;
+    background-color: #eee;
+
+    margin-top: 50px;
+}
+
+/* media
+--------------
+*/
+
+@media (max-width: 410px) {
+    body {
+        margin: 0 10px 0 10px;
+    }
+}
+
+@media (max-width: 300px) {
+    .calendar div {
+        margin: 1px;
+    }
+}
+
+@media (max-width: 275px) {
+    .date-picker .date {
+        font-size: 20px;
+        font-weight: bold;
+    
+        margin: 0 25px;
+    }
+}
