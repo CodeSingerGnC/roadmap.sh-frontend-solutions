@@ -9,6 +9,7 @@ This repo contains solutions for [Frontend Projects from roadmap.sh](https://roa
 - [Personal Portfolio](./03-personal-portfolio/)
 - [Changelog Component](./04-changelog-component/)
 - [Testimonial Cards](./05-testimonial-cards/)
+- [Datepicker UI](./06-datepicker-ui/)
 
 ## Projects List
 
@@ -19,3 +20,4 @@ This is projects address.
 [Personal Portfolio](https://roadmap.sh/projects/portfolio-website)
 [Changelog Component](https://roadmap.sh/projects/changelog-component)
 [Testimonial Cards](https://roadmap.sh/projects/testimonial-cards)
+[Datepicker UI](https://roadmap.sh/projects/datepicker-ui)
