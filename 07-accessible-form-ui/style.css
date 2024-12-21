@@ -1,0 +1,202 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Serif+Text:ital@0;1&display=swap');
+
+:root {
+    --black: #000;
+    --white: #fff;
+    --grey: rgb(202, 184, 184);
+    --light-grey: rgb(229,229,229);
+    --default-font-family: "DM Serif Text", serif;
+}
+
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font: normal 16px/1.5 var(--default-font-family);
+    width: 750px;
+    height: 100vh;
+
+    display: flex;
+    align-items: center;
+
+    margin: 0 auto;
+}
+
+/* container
+------------
+*/
+
+.container {
+    width: 100%;
+
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    grid-template-areas: 
+        "part1 part2"
+        "part1 part3";
+    border: 1px solid;
+    border-radius: 20px;
+}
+
+/* grid-area
+------------
+*/
+
+.input-container {
+    grid-area: part1;
+}
+
+.progress-container {
+    grid-area: part2;
+}
+
+.requirement-lists {
+    grid-area: part3;
+}
+
+/* input-container
+------------------
+*/
+
+.input-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    padding: 25px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+
+    position: relative;
+
+    width: 100%;
+}
+
+.form-group label {
+    font-size: 20px;
+}
+
+.form-group input {
+    height: 40px;
+    line-height: 40px;
+
+    border-radius: 10px;
+    padding-left: 10px; /* 调整左侧间距 */
+}
+
+.form-group input::placeholder {
+    font: normal 20px/1.5 var(--default-font-family);
+    color: var(--grey);
+}
+
+.form-group input::-webkit-input-placeholder { 
+    font: normal 20px/1.5 var(--default-font-family, Arial);
+    color: var(--grey);
+}
+
+.form-group .visible {
+    position: absolute;
+    top: 50px;
+    right: 5px;
+    transform: translateY(-50%);
+
+    width: 25px;
+    height: 25px;
+
+    border: none;
+
+    background-image: url('images/eye.jpeg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+
+    cursor: pointer;
+}
+
+.input-container #submit {
+    width: 90%;
+    height: 40px;
+
+    background-color: var(--black);
+    color: var(--white);
+
+    font-size: 20px;
+    font: var(--default-font-family);
+
+    border-radius: 10px;
+
+    cursor: pointer;
+}
+
+
+/* progress-container
+------------------------------------------
+*/
+
+.progress-container { 
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+    position: relative;
+    width: 200px;
+    height: 200px;
+
+    padding-top: 25px;
+}
+
+.progress-circle {
+    stroke: var(--black);
+    stroke-width: 5;
+    fill: none;
+    transition: stroke-dashoffset 0.5s ease; 
+}
+
+.progress-background {
+    stroke: var(--white);
+    stroke-width: 10;
+    fill: none; 
+}
+
+.progress-text {
+    font-size: 24px;
+    fill: var(--black);
+    text-anchor: middle;
+    dominant-baseline: middle;
+}
+
+.progress-container p {
+    font-size: 20px;
+}
+
+/* requirement-lists
+--------------------
+*/
+
+.requirement-lists {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    width: 90%;
+    height: 90%;
+    
+    border: 1px solid;
+    border-radius: 10px;
+    padding: 10px;
+
+    background-color: var(--light-grey);
+}
+
+.requirement-lists ul {
+    list-style-type: none;
+}
