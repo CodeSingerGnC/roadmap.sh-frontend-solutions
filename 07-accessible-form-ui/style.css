@@ -304,18 +304,6 @@ body {
 
 @media (max-width: 600px) and (max-height: 670px){
     .progress-container { 
-        padding-top: 35px;
-    }
-}
-
-@media (max-width: 600px) and (max-height: 645px){
-    .progress-container { 
-        padding-top: 20px;
-    }
-}
-
-@media (max-width: 600px) and (max-height: 635px){
-    .progress-container { 
         padding-top: 10px;
     }
 }
