@@ -290,23 +290,6 @@ body {
 
 @media (max-width: 600px) and (max-height: 700px){
     .progress-container { 
-        padding-top: 10px;
-    }
-    .progress-container p {
-        display: none;
-    }
-    .progress-container { 
-        width: auto;
-        height: auto;
-    }
-    .progress-container .progress-svg {
-        width: 124px;
-        width: 124px;
-    }
-}
-
-@media (max-width: 600px) and (max-height: 625px){
-    .progress-container { 
         display: none;
     }
 }
