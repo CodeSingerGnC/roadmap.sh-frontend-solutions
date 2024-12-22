@@ -4,8 +4,15 @@
     --black: #000;
     --white: #fff;
     --grey: rgb(202, 184, 184);
-    --light-grey: rgb(229,229,229);
+    --light-grey: rgb(233, 232, 232);
+
     --default-font-family: "DM Serif Text", serif;
+    --default-font-size: 24px;
+    --smaller-font-size: 20px;
+    --smellest-font-size: 18px;
+
+    --input-height: 40px;
+    --label-height: 36px;
 }
 
 *,
@@ -17,8 +24,8 @@
 }
 
 body {
-    font: normal 16px/1.5 var(--default-font-family);
-    width: 750px;
+    font: normal var(--default-font-size)/1.5 var(--default-font-family);
+    width: 800px;
     height: 100vh;
 
     display: flex;
@@ -35,8 +42,8 @@ body {
     width: 100%;
 
     display: grid;
-    grid-template-columns: 2fr 1fr;
-    grid-template-rows: 1fr 1fr;
+    grid-template-columns: 1.5fr 1fr;
+    grid-template-rows: 1fr 1.5fr;
     grid-template-areas: 
         "part1 part2"
         "part1 part3";
@@ -50,14 +57,21 @@ body {
 
 .input-container {
     grid-area: part1;
+    align-self: center;
 }
 
 .progress-container {
     grid-area: part2;
+
+    justify-self: center;
+    align-self: center;
 }
 
 .requirement-lists {
     grid-area: part3;
+
+    justify-self: center;
+    align-self: center;
 }
 
 /* input-container
@@ -67,9 +81,13 @@ body {
 .input-container {
     display: flex;
     flex-direction: column;
+    justify-content: center;
     align-items: center;
-    gap: 10px;
-    padding: 25px;
+
+    height: 100%;
+
+    gap: 45px;
+    padding: 55px;
 }
 
 .form-group {
@@ -82,30 +100,30 @@ body {
 }
 
 .form-group label {
-    font-size: 20px;
+    height: var(--label-height);
 }
 
 .form-group input {
-    height: 40px;
-    line-height: 40px;
+    height: var(--input-height);
+    line-height: var(--input-height);
 
     border-radius: 10px;
-    padding-left: 10px; /* 调整左侧间距 */
+    padding-left: 10px;
 }
 
 .form-group input::placeholder {
-    font: normal 20px/1.5 var(--default-font-family);
+    font: normal var(--smaller-font-size)/1.5 var(--default-font-family);
     color: var(--grey);
 }
 
 .form-group input::-webkit-input-placeholder { 
-    font: normal 20px/1.5 var(--default-font-family, Arial);
+    font: normal var(--smaller-font-size)/1.5 var(--default-font-family, Arial);
     color: var(--grey);
 }
 
 .form-group .visible {
     position: absolute;
-    top: 50px;
+    top: calc(var(--label-height) + var(--input-height)/2);
     right: 5px;
     transform: translateY(-50%);
 
@@ -129,7 +147,7 @@ body {
     background-color: var(--black);
     color: var(--white);
 
-    font-size: 20px;
+    font-size: var(--smaller-font-size);
     font: var(--default-font-family);
 
     border-radius: 10px;
@@ -137,6 +155,11 @@ body {
     cursor: pointer;
 }
 
+.error-message {
+    color: red;
+    font-size: 14px;
+    margin-top: 5px;
+}
 
 /* progress-container
 ------------------------------------------
@@ -148,10 +171,10 @@ body {
     align-items: center;
     
     position: relative;
-    width: 200px;
-    height: 200px;
+    width: 230px;
+    height: 245px;
 
-    padding-top: 25px;
+    padding-top: 55px;
 }
 
 .progress-circle {
@@ -168,14 +191,13 @@ body {
 }
 
 .progress-text {
-    font-size: 24px;
     fill: var(--black);
     text-anchor: middle;
     dominant-baseline: middle;
 }
 
 .progress-container p {
-    font-size: 20px;
+    padding-top: 15px;
 }
 
 /* requirement-lists
@@ -187,16 +209,158 @@ body {
     flex-direction: column;
     align-items: center;
 
-    width: 90%;
+    width: 85%;
     height: 90%;
     
     border: 1px solid;
-    border-radius: 10px;
-    padding: 10px;
+    border-radius: 30px;
+    padding-top: 20px;
+
+    font-size: var(--smellest-font-size);
+    line-height: 35px;
 
     background-color: var(--light-grey);
 }
 
 .requirement-lists ul {
     list-style-type: none;
+    text-decoration: none;
+}
+
+.requirement-lists ul li {
+    padding: 5px;
+}
+
+/*@media
+--------
+*/
+
+@media (max-height: 675px) {
+    body {
+        height: auto;
+    }
+    .container {
+        border: none;
+    }
+}
+
+@media (max-width: 800px) {
+    body {
+        width: 600px;
+    } 
+    .container {
+        grid-template-columns: 1.2fr 1fr;
+        grid-template-rows: 1fr 1.5fr;
+    }
+    .input-container {
+        gap: 45px;
+        padding: 20px;
+    }
+}
+
+@media (max-width: 600px) {
+    body {
+        width: auto;
+        height: 100vh;
+    } 
+    .container {
+        grid-template-columns: none;
+        grid-template-rows: auto 1fr;
+        grid-template-areas: 
+            "part2"
+            "part1"
+            "part1";
+
+        border: none;
+    }
+    .input-container {
+        gap: 20px;
+        padding: auto;
+    }
+    .progress-container { 
+        width: 230px;
+        height: 230px;
+    
+        padding-top: 55px;
+    }
+    .requirement-lists {
+        display: none;
+    }
+}
+
+@media (max-width: 600px) and (max-height: 700px){
+    .progress-container p {
+        display: none;
+    }
+    .progress-container { 
+        width: auto;
+        height: auto;
+    }
+    .progress-container .progress-svg {
+        width: 124px;
+        width: 124px;
+    }
+}
+
+@media (max-width: 600px) and (max-height: 670px){
+    .progress-container { 
+        padding-top: 35px;
+    }
+}
+
+@media (max-width: 600px) and (max-height: 645px){
+    .progress-container { 
+        padding-top: 20px;
+    }
+}
+
+@media (max-width: 600px) and (max-height: 635px){
+    .progress-container { 
+        padding-top: 10px;
+    }
+}
+
+@media (max-width: 600px) and (max-height: 625px){
+    .progress-container { 
+        display: none;
+    }
+}
+
+@media (max-width: 600px) and (max-height: 500px){
+    body {
+        font-size: 20px;
+    }
+    
+    .form-group label {
+        height: 30px;
+    }
+
+    .form-group input {
+        height: 30px;
+        line-height: 30px;
+    }
+    .form-group input::placeholder {
+        font-size: 18px;
+    }
+    .form-group input::-webkit-input-placeholder { 
+        font-size: 18px;
+    }
+    .input-container #submit {
+        font-size: 16px;
+    }
+    .form-group .visible {
+        position: absolute;
+        top: calc(30px + 30px/2);
+        right: 5px;
+        transform: translateY(-50%);
+    
+        width: 20px;
+        height: 20px;
+    }
+}
+
+@media (max-width: 600px) and (max-height: 400px){
+    body {
+        height: auto;
+    }
 }
