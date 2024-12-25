@@ -11,6 +11,7 @@ This repo contains solutions for [Frontend Projects from roadmap.sh](https://roa
 - [Testimonial Cards](./05-testimonial-cards/)
 - [Datepicker UI](./06-datepicker-ui/)
 - [Accessible Form UI](./07-accessible-form-ui/)
+- [Image Grid Layout](./08-image-grid-layout/)
 
 ## Projects List
 
@@ -23,3 +24,5 @@ This is projects address.
 [Testimonial Cards](https://roadmap.sh/projects/testimonial-cards)
 [Datepicker UI](https://roadmap.sh/projects/datepicker-ui)
 [Accessible Form UI](https://roadmap.sh/projects/accessible-form-ui)
+[Image Grid Layout](https://roadmap.sh/projects/image-grid)
+
