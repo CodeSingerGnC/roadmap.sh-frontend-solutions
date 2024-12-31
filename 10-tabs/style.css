@@ -1,0 +1,67 @@
+:root {
+    --black: black;
+    --white: white;
+    --grey: grey;
+}
+
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    width: 600px;
+
+    margin: 30px auto;
+}
+
+/* tabs
+-------
+*/
+
+.tabs {
+    display: flex;
+    margin-bottom: 20px;
+}
+
+.tab {
+    margin-right: 10px;
+    color: var(--grey);
+    cursor: pointer;
+}
+
+.active {
+    border-bottom: 1px solid;
+    color: var(--black);
+}
+
+/* tab-content
+--------------
+*/
+
+.tab-content {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.tab-content .block {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    height: 100px;
+    width: 100%;
+
+    border-radius: 10px;
+
+    background-color: var(--black);
+    color: var(--white);
+}
+
+.hidden {
+    display: none;
+}
