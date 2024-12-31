@@ -14,6 +14,7 @@ This repo contains solutions for [Frontend Projects from roadmap.sh](https://roa
 - [Image Grid Layout](./08-image-grid-layout/)
 - [Tooltip UI](./09-tooltip-ui/)
 - [Tabs](./10-tabs/)
+- [Cookie Consent](./11-cookie-consent/)
 
 ## Projects List
 
@@ -29,3 +30,4 @@ This is projects address.
 [Image Grid Layout](https://roadmap.sh/projects/image-grid)
 [Tooltip UI](https://roadmap.sh/projects/tooltip-ui)
 [Tabs](https://roadmap.sh/projects/simple-tabs)
+[Cookie Consent](https://roadmap.sh/projects/cookie-consent)
