@@ -1,0 +1,64 @@
+@import url(https://fonts.bunny.net/css?family=abhaya-libre:500);
+
+/*TODO: .question 限制高度在文本超限时排版会出现问题*/
+
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Abhaya Libre', serif;
+    font-size: 16px;
+    line-height: 1.5;
+
+    width: 500px;
+    margin: 10px auto;
+}
+
+.question {
+    position: relative;
+
+    background-color: black;
+    color: white;
+
+    width: 90%;
+    height: 50px;
+
+    margin-top: 5px;
+    border-radius: 10px;
+    padding-top: 10px;
+    padding-left: 10px;
+}
+
+.question p {
+    font-size: 20px;
+}
+
+.question button {
+    position: absolute;
+    bottom: 16px;
+    right: 15px;
+
+    border: none;
+    background-color: black;
+    color: white;
+
+    cursor: pointer;
+}
+
+.answer {
+    width: 90%;
+
+    margin-top: 5px;
+    border: 1px solid;
+    border-radius: 10px;
+    padding: 10px;
+}
+
+.hidden {
+    display: none;
+}
