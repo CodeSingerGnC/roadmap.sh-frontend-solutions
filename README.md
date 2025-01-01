@@ -15,6 +15,7 @@ This repo contains solutions for [Frontend Projects from roadmap.sh](https://roa
 - [Tooltip UI](./09-tooltip-ui/)
 - [Tabs](./10-tabs/)
 - [Cookie Consent](./11-cookie-consent/)
+- [Restricted Textarea](./12-restricted-textarea/)
 
 ## Projects List
 
@@ -31,3 +32,4 @@ This is projects address.
 [Tooltip UI](https://roadmap.sh/projects/tooltip-ui)
 [Tabs](https://roadmap.sh/projects/simple-tabs)
 [Cookie Consent](https://roadmap.sh/projects/cookie-consent)
+[Restricted-Textarea](https://roadmap.sh/projects/restricted-textarea)
