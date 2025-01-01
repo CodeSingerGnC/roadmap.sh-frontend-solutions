@@ -1,0 +1,65 @@
+@import url(https://fonts.bunny.net/css?family=abhaya-libre:500);
+
+:root {
+    --black: black;
+    --white: white;
+    --grey: grey;
+}
+
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Abhaya Libre', serif;
+
+    width: 500px;
+    margin: 20px auto;
+}
+
+label {
+    font-size: 20px;
+}
+
+/* container
+------------
+*/
+
+.container {
+    display: flex;
+    flex-direction: column;   
+
+    position: relative;
+}
+
+/* textarea
+----------
+*/
+
+textarea {
+    height: 150px;
+
+    margin: 10px 0px 0px 0px;
+    padding: 25px;
+    border: 1px solid;
+    border-radius: 20px;
+}
+
+.limit-reached {
+    border: 2px solid;
+    border-color: red ;
+}
+
+/* charCount
+------------
+*/
+
+#charCount {
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+}
