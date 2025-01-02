@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Age Calculator</title>
+    <link rel="stylesheet" href="/src/style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="intro">
+            <h2>Age Calculator</h2>
+        </div>
+        <div class="calculator">
+            <form id="dateForm">
+                <label for="datePicker">Enter your birth date:</label>
+                <input type="text" id="datePicker">
+                <input type="submit" id="submit" value="Calculate">
+            </form>
+            <div class="result">
+                <span>You are </span><span id="dynamic">21 years 10 months</span><span> old</span>
+            </div>
+        </div>
+    </div>    
+    <script type="module" src="/src/main.js"></script>
+</body>
+</html>

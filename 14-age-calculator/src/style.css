@@ -1,0 +1,67 @@
+@import url(https://fonts.bunny.net/css?family=abhaya-libre:500);
+
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Abhaya Libre', serif;
+    font-size: 18px;
+    
+    width: 300px;
+    margin: 30px auto;
+}
+
+
+/* intro
+--------
+*/
+
+.intro {
+    text-align: center;
+}
+
+/* calculator
+-------------
+*/
+
+.calculator {
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+#dateForm {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.result {
+    text-align: center;
+    margin-top: 10px;
+}
+
+#datePicker {
+    height: 35px;
+
+    padding: 10px;
+}
+
+#submit {
+    height: 35px;
+    background-color: grey;
+    color: white;
+
+    border: none;
+    border-radius: 5px;
+
+    cursor: pointer;
+}
+
+#dynamic {
+    font-weight: bold;
+}

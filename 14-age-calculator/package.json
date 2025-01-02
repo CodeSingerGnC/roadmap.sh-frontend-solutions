@@ -1,0 +1,19 @@
+{
+  "name": "14-age-calculator",
+  "version": "1.0.0",
+  "main": "script.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "devDependencies": {
+    "vite": "^6.0.6"
+  },
+  "dependencies": {
+    "js-datepicker": "^5.18.3",
+    "luxon": "^3.5.0"
+  }
+}
