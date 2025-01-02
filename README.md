@@ -16,6 +16,7 @@ This repo contains solutions for [Frontend Projects from roadmap.sh](https://roa
 - [Tabs](./10-tabs/)
 - [Cookie Consent](./11-cookie-consent/)
 - [Restricted Textarea](./12-restricted-textarea/)
+- [Accordion](./13-accordion/)
 
 ## Projects List
 
@@ -33,3 +34,4 @@ This is projects address.
 [Tabs](https://roadmap.sh/projects/simple-tabs)
 [Cookie Consent](https://roadmap.sh/projects/cookie-consent)
 [Restricted-Textarea](https://roadmap.sh/projects/restricted-textarea)
+[Accordion](https://roadmap.sh/projects/accordion)
