@@ -17,6 +17,7 @@ This repo contains solutions for [Frontend Projects from roadmap.sh](https://roa
 - [Cookie Consent](./11-cookie-consent/)
 - [Restricted Textarea](./12-restricted-textarea/)
 - [Accordion](./13-accordion/)
+- [Age Calculator](./14-age-calculator/)
 
 ## Projects List
 
@@ -35,3 +36,4 @@ This is projects address.
 [Cookie Consent](https://roadmap.sh/projects/cookie-consent)
 [Restricted-Textarea](https://roadmap.sh/projects/restricted-textarea)
 [Accordion](https://roadmap.sh/projects/accordion)
+[Age Calculator](https://roadmap.sh/projects/age-calculator)
